@@ -11,6 +11,7 @@ import (
 	"github.com/google/generative-ai-go/genai"
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"google.golang.org/api/option"
 )
 
@@ -30,6 +31,11 @@ func main() {
 
 	// Register chat endpoint
 	e.POST("/chat", chat)
+	// Use CORS middleware
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:3000"},
+		AllowMethods: []string{echo.POST},
+	}))
 
 	log.Fatal(e.Start(os.Getenv("PORT")))
 }

@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.input {
+  display: flex;
+  flex-direction: row; /* Stack items vertically */
+  align-items: center;
+  gap: 10px; /* Adds space between the input and button */
+}
+
+.input input, .input button {
+  width: 300px; /* Sets a specific width */
+  height: 40px; /* Sets a specific height */
+  padding: 10px; /* Adds padding for better appearance */
+  font-size: 1em; /* Adjusts the font size */
+  border-radius: 5px; /* Rounds the corners */
+  border: 1px solid #ccc; /* Adds a border */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+}
+
+.input button {
+  cursor: pointer; /* Changes cursor to pointer for buttons */
+  background-color: #61dafb; /* Sets a background color */
+  color: white; /* Sets the text color */
+  border: none; /* Removes the border */
+}
+
+.input button:disabled {
+  background-color: #cccccc; /* Changes background color when button is disabled */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: #61dafb;
+}
+
+.response {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
